@@ -1,0 +1,129 @@
+.form .group:not(.no_margin_bottom) {
+    margin-bottom: 40px;
+}
+
+.form .group {
+    position: relative;
+}
+
+.form .group img {
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 12px;
+}
+
+.form input:not([type="checkbox"]) {
+    font-size: 14px;
+    box-sizing: border-box;
+    font-weight: 400;
+    padding: 10px 15px 13px 0;
+    color: var(--white);
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--white);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 0 12px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form label.label {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.form label.static_label {
+    display: block;
+    text-transform: uppercase;
+    color: var(--white);
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.form label.label span {
+    color: var(--pink);
+    padding-left: 10px;
+    vertical-align: 2px;
+    font-size: 12px;
+}
+
+/* active state */
+.form input:focus~label.label,
+input:valid~label.label {
+    top: -20px;
+    font-size: 12px;
+    left: 0;
+    opacity: 0.6;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: white !important;
+}
+
+/* BOTTOM BARS ================================= */
+.form .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* HIGHLIGHTER ================================== */
+.form .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.one_input {
+    width: 100%;
+    position: relative;
+    display: block;
+    padding-top: 20px;
+}
+
+.dual_inputs .group {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    float: left;
+}
+
+.dual_inputs .group:last-of-type {
+    margin-right: 0;
+}
+
+
+/* Scaling */
+@media(max-width: 400px) {
+    .dual_inputs .group {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        margin-bottom: 40px;
+    }
+
+    .dual_inputs .group.no_margin_bottom:last-of-type {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,146 @@
+.form .one_select {
+    display: block;
+    cursor: pointer;
+    color: var(--white);
+    height: 45px;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom: solid 1px white;
+    background-color: var(--mid-grey);
+}
+
+.form .one_select all {
+    pointer-events: none;
+}
+
+.form .one_select.disabled_select {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.form .one_select p {
+    transition: all 0.3s ease;
+    font-size: 16px;
+    position: absolute;
+    font-weight: 400;
+    top: 10px;
+    max-width: calc(100% - 10px);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.form .one_select p i {
+    padding-right: 5px;
+}
+
+.form .one_select i.arrow {
+    right: 0;
+    top: 17px;
+    position: absolute;
+}
+
+.form .one_select .dropdown {
+    width: 100%;
+    padding-top: 45px;
+    display: none;
+}
+
+.form .one_select .dropdown .inner_dropdown {
+    max-height: 153px;
+    overflow: hidden;
+}
+
+.form .one_select input {
+    display: none !important;
+}
+
+.form .one_select .dropdown li {
+    box-sizing: border-box;
+    background-color: #3a3a3d;
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.form .one_select .dropdown li i {
+    padding-right: 10px;
+}
+
+.form .one_select .dropdown li small {
+    display: block;
+    pointer-events: none;
+    width: 100%;
+    color: var(--light-grey);
+    margin-bottom: -5px;
+    font-size: 12px;
+}
+
+.form .one_select .dropdown li span {
+    text-align: right;
+    font-size: 12px;
+    padding-top: 3px;
+    float: right;
+}
+
+.form .one_select .dropdown li:hover {
+    cursor: pointer;
+    background-color: #2e2e30;
+}
+
+.form .one_select .dropdown li.disabled {
+    cursor: default !important;
+    background-color: #191919;
+}
+
+.form .one_select .dropdown li.disabled:hover {
+    background-color: #191919;
+}
+
+.form .one_select .dropdown li.disabled_buy span {
+    cursor: pointer !important;
+    opacity: 0;
+    padding: 7px 5px;
+    pointer-events: none;
+    color: var(--gold);
+    font-weight: 800;
+    margin-top: -2px;
+}
+
+.form .one_select .dropdown li.disabled_buy:hover span {
+    opacity: 1;
+}
+
+.form .one_select .dropdown li.disabled all,
+.form .one_select .dropdown li.disabled span {
+    opacity: 0.3;
+}
+
+.form .one_select .dropdown li.disabled:hover span {
+    opacity: 1;
+}
+
+.show_dropdown {
+    display: block !important;
+}
+
+.form .one_select p.move_label {
+    top: -20px;
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+.form .side_by_side .one_select {
+    width: calc(50% - 25px);
+    float: left;
+    margin-right: 50px;
+}
+
+.form .one_select.on_top {
+    z-index: 99999 !important;
+}
+
+.form .side_by_side .one_select:last-of-type {
+    margin-right: 0;
+}

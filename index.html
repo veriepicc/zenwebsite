@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="background.css">
+  <style>
+    body {
+      font-family: 'Brave Sans', 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(to bottom, #e1f5fe, #2196f3);
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      user-select: none; /* Disable text selection */
+    }
+
+    img {
+      pointer-events: none; /* Disable image dragging */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .logo {
+      font-size: 48px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 20px;
+      text-shadow: 10px 2px 8px rgba(0, 0, 0, 0.7);
+      transform: scale(1);
+      transition: transform 0.3s ease;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      margin: 0 10px;
+      padding: 14px 32px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      border: none;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      user-select: none; /* Disable button text selection */
+      pointer-events: auto; /* Enable button functionality */
+    }
+
+    .button span {
+      margin-left: 5px;
+    }
+
+    .discord-button {
+      background-color: #7289DA;
+      color: #fff;
+    }
+
+    .download-button {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    .github-button {
+      background-color: #24292E;
+      color: #fff;
+    }
+
+    .button:hover {
+      transform: scale(1.15);
+    }
+
+    .discord-button:hover {
+      background-color: #5367A9;
+    }
+
+    .github-button:hover {
+      background-color: #3C444C;
+    }
+
+    .button:focus {
+      outline: none;
+    }
+
+    .logo:hover {
+      transform: scale(1.2);
+    }
+
+    .logo-container {
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border-radius: 30px;
+      padding: 20px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <h1 class="logo">Zen <span>Client</span></h1>
+    </div>
+    <div class="button-container">
+      <a href="https://discord.gg/wyGmXpNSPQ" class="button discord-button">
+        <i class="fab fa-discord"></i><span>Discord</span>
+      </a>
+      <a href="https://discord.gg/wyGmXpNSPQ" class="button download-button">Download</a>
+      <a href="https://discord.gg/wyGmXpNSPQ" class="button github-button">
+        <i class="fab fa-github"></i><span>GitHub</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="bg">
+    <canvas width="1536" height="758"></canvas>
+    <canvas width="1536" height="758"></canvas>
+    <canvas width="1536" height="758"></canvas>
+  </div>
+
+  <script src="background.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".container").animate({ opacity: 1 }, 150);
+    });
+  </script>
+</body>
+</html>

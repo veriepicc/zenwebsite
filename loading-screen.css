@@ -1,0 +1,41 @@
+.fa-spinner{
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loading_screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--highlight);
+    color: var(--white);
+    display: none;
+    opacity: 0;
+    position: fixed;
+    font-size: 20px;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+}
+
+.loading_screen div{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.loading_screen div p{
+    text-align: center;
+}
+
+.loading_screen i{
+    margin-right: 5px;
+}
